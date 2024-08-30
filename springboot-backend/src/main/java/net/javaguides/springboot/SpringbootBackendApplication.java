@@ -41,7 +41,7 @@ public class SpringbootBackendApplication {
 	            SdkMeterProvider.builder()
 	                .setResource(
 	                    Resource.getDefault().toBuilder()
-	                        .put("service.name", "micrometer-shim")
+	                        .put("service.name", "Employee-Management-App")
 	                        // Include instrumentation.provider=micrometer to enable micrometer metrics
 	                        // experience in New Relic
 	                        .put("instrumentation.provider", "micrometer")
@@ -65,7 +65,7 @@ public class SpringbootBackendApplication {
 	                                    DefaultAggregationSelector.getDefault()
 	                                        .with(
 	                                            InstrumentType.HISTOGRAM,
-	                                            Aggregation.exponentialHistogram()))
+	                                            Aggregation.base2ExponentialBucketHistogram()))
 	                                .build())
 	                        // Match default micrometer collection interval of 60 seconds
 	                        .setInterval(Duration.ofSeconds(60))
