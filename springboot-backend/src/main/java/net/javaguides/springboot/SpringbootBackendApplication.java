@@ -65,7 +65,7 @@ public class SpringbootBackendApplication {
 	                                    DefaultAggregationSelector.getDefault()
 	                                        .with(
 	                                            InstrumentType.HISTOGRAM,
-	                                            Aggregation.exponentialHistogram()()))
+	                                            Aggregation.exponentialHistogram()))
 	                                .build())
 	                        // Match default micrometer collection interval of 60 seconds
 	                        .setInterval(Duration.ofSeconds(60))
