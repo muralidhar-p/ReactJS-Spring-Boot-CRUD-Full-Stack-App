@@ -61,11 +61,6 @@ public class SpringbootBackendApplication {
 	                                // Use exponential histogram aggregation for histogram instruments
 	                                // to
 	                                // produce better data and compression
-	                                .setDefaultAggregationSelector(
-	                                    DefaultAggregationSelector.getDefault()
-	                                        .with(
-	                                            InstrumentType.HISTOGRAM,
-	                                            Aggregation.histogram()))
 	                                .build())
 	                        // Match default micrometer collection interval of 60 seconds
 	                        .setInterval(Duration.ofSeconds(60))
